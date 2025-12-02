@@ -81,7 +81,7 @@ export default function Contact() {
             成为先驱者
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-2xl mx-auto">
-            申请成为首批"具身智能示范实验室"合作伙伴
+            申请成为首批&ldquo;具身智能示范实验室&rdquo;合作伙伴
             <br />
             享受独家技术支持与合作优惠
           </p>
@@ -111,7 +111,7 @@ export default function Contact() {
                 </div>
 
                 <p className="text-slate-400 mb-8 leading-relaxed">
-                  如果您是高校、科研院所或教育集团，我们诚邀您加入首批"具身智能示范实验室"合作计划。
+                  如果您是高校、科研院所或教育集团，我们诚邀您加入首批&ldquo;具身智能示范实验室&rdquo;合作计划。
                   作为先驱合作伙伴，您将获得独家资源与支持。
                 </p>
 
