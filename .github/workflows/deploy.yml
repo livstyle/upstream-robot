@@ -14,11 +14,10 @@ permissions:
   pages: write
   id-token: write
 
-# 只允许一个并发部署，跳过正在运行和最新排队之间的运行
-# 但不要取消正在进行的运行，以允许这些生产部署完成
+# 只允许一个并发部署
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   # 构建任务
@@ -34,9 +33,6 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Install dependencies
         run: npm ci
 
@@ -48,6 +44,9 @@ jobs:
 
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
