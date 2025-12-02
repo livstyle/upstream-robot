@@ -36,8 +36,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
 
       - name: Install dependencies
         run: npm ci
@@ -45,10 +43,11 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
-          # 用于 GitHub Pages 的基础路径配置
-          # 如果部署到 https://<username>.github.io/<repo>/ 需要设置
-          # 如果部署到 https://<username>.github.io/ 则不需要
-          NEXT_PUBLIC_BASE_PATH: ${{ github.event.repository.name != format('{0}.github.io', github.repository_owner) && format('/{0}', github.event.repository.name) || '' }}
+          GITHUB_ACTIONS: "true"
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -66,4 +65,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
