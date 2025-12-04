@@ -13,31 +13,40 @@ import {
   Cloud,
   Shield,
   Zap,
+  Mic,
+  Package,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const platformFeatures = [
   {
-    icon: Star,
-    title: '"清华严选"库',
-    description: "获取独家、权威、不断更新的高级教学内容。所有内容经过清华大学专家团队严格审核。",
-    color: "text-yellow-400",
-    bgColor: "bg-yellow-500/10",
-  },
-  {
-    icon: Layout,
-    title: "可视化编辑器",
-    description: "拖拽式界面，让教师快速定制和微调实验脚本。无需编程，所见即所得。",
+    icon: Mic,
+    title: "描述你的想法",
+    description: "用自然语言描述你的想法，AI自动理解需求并生成可执行方案。真正的零代码开发体验。",
     color: "text-cyan-400",
     bgColor: "bg-cyan-500/10",
   },
   {
-    icon: Users,
-    title: "全球社区",
-    description: "分享创新脚本，参与贡献即获积分和官方认证。与全球教育者共同成长。",
+    icon: Layout,
+    title: "可视化编辑器",
+    description: "拖拽式界面，让任何人都能快速定制和微调参数。所见即所得，实时预览效果。",
     color: "text-purple-400",
     bgColor: "bg-purple-500/10",
+  },
+  {
+    icon: Package,
+    title: "应用方案市场",
+    description: "浏览和购买已验证的解决方案，或将自己的创作上架销售。共享经济，共同受益。",
+    color: "text-amber-400",
+    bgColor: "bg-amber-500/10",
+  },
+  {
+    icon: Users,
+    title: "开发者社区",
+    description: "与全球开发者交流分享，获取技术支持。参与贡献即获积分和官方认证。",
+    color: "text-green-400",
+    bgColor: "bg-green-500/10",
   },
 ];
 
@@ -45,7 +54,7 @@ const platformStats = [
   { icon: Cloud, label: "云端同步", value: "实时" },
   { icon: Shield, label: "数据安全", value: "企业级" },
   { icon: Zap, label: "响应速度", value: "<100ms" },
-  { icon: Award, label: "认证内容", value: "500+" },
+  { icon: Award, label: "方案库", value: "500+" },
 ];
 
 export default function Platform() {
@@ -55,7 +64,7 @@ export default function Platform() {
   return (
     <section
       id="platform"
-      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-indigo-950"
+      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-900"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-20" />
@@ -79,12 +88,12 @@ export default function Platform() {
             className="text-responsive-2xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            &ldquo;具象师&rdquo;云平台
+            AI具象师云平台
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-3xl mx-auto">
-            连接权威知识、具身智能技术与全球教育者的智能中枢
+            连接创意、技术与商业的一站式具身智能开发平台
             <br />
-            一站式管理您的教学实验内容
+            从想法到产品，从原型到商业化
           </p>
         </motion.div>
 
@@ -110,7 +119,7 @@ export default function Platform() {
                   <div className="flex-1 mx-4">
                     <div className="glass rounded-lg px-4 py-1.5 text-sm text-slate-400 flex items-center gap-2">
                       <Shield className="w-4 h-4 text-green-400" />
-                      <span>https://platform.zhishijuxiang.com</span>
+                      <span>https://platform.aijuxiang.com</span>
                     </div>
                   </div>
                 </div>
@@ -124,8 +133,8 @@ export default function Platform() {
                         <Sparkles className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-white">具象师云平台</h4>
-                        <p className="text-xs text-slate-500">教育者工作台</p>
+                        <h4 className="font-semibold text-white">AI具象师云平台</h4>
+                        <p className="text-xs text-slate-500">创作者工作台</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 text-green-400 text-xs">
@@ -137,9 +146,9 @@ export default function Platform() {
                   {/* Dashboard Cards */}
                   <div className="grid grid-cols-3 gap-3 mb-6">
                     {[
-                      { label: "我的脚本", value: "24" },
-                      { label: "已发布", value: "18" },
-                      { label: "社区积分", value: "1,280" },
+                      { label: "我的项目", value: "12" },
+                      { label: "已部署", value: "8" },
+                      { label: "收益(元)", value: "28,500" },
                     ].map((item, index) => (
                       <div
                         key={index}
@@ -151,15 +160,15 @@ export default function Platform() {
                     ))}
                   </div>
 
-                  {/* Recent Scripts */}
+                  {/* Recent Projects */}
                   <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/50">
-                    <h5 className="text-sm font-medium text-slate-400 mb-3">最近脚本</h5>
+                    <h5 className="text-sm font-medium text-slate-400 mb-3">最近项目</h5>
                     <div className="space-y-2">
                       {[
-                        { name: "牛顿运动定律演示", subject: "物理", status: "已发布" },
-                        { name: "DNA双螺旋结构", subject: "生物", status: "审核中" },
-                        { name: "三角函数图像", subject: "数学", status: "草稿" },
-                      ].map((script, index) => (
+                        { name: "康复助行机器人", type: "医疗", status: "已上线" },
+                        { name: "智能分拣系统", type: "物流", status: "测试中" },
+                        { name: "教学演示机械臂", type: "教育", status: "开发中" },
+                      ].map((project, index) => (
                         <div
                           key={index}
                           className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-700/30 transition-colors"
@@ -169,20 +178,20 @@ export default function Platform() {
                               <Layout className="w-4 h-4 text-cyan-400" />
                             </div>
                             <div>
-                              <p className="text-sm text-white">{script.name}</p>
-                              <p className="text-xs text-slate-500">{script.subject}</p>
+                              <p className="text-sm text-white">{project.name}</p>
+                              <p className="text-xs text-slate-500">{project.type}</p>
                             </div>
                           </div>
                           <span
                             className={`text-xs px-2 py-1 rounded-full ${
-                              script.status === "已发布"
+                              project.status === "已上线"
                                 ? "bg-green-500/20 text-green-400"
-                                : script.status === "审核中"
+                                : project.status === "测试中"
                                 ? "bg-yellow-500/20 text-yellow-400"
                                 : "bg-slate-500/20 text-slate-400"
                             }`}
                           >
-                            {script.status}
+                            {project.status}
                           </span>
                         </div>
                       ))}
@@ -266,7 +275,7 @@ export default function Platform() {
               className="mt-8"
             >
               <Button size="lg" className="w-full sm:w-auto group">
-                <span>探索云平台</span>
+                <span>免费开始描述你的想法</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </motion.div>
@@ -276,4 +285,3 @@ export default function Platform() {
     </section>
   );
 }
-

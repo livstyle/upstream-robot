@@ -1,30 +1,54 @@
-# 知识具象师 - AI 具身智能学科实验平台
+# AI具象师 - 辰龙OS 具身智能平台
 
 <p align="center">
-  <img src="public/logo.svg" alt="知识具象师 Logo" width="120" />
+  <img src="public/logo.svg" alt="AI具象师 Logo" width="120" />
 </p>
 
 <p align="center">
-  <strong>由清华大学研究团队领衔，基于 RK3588 平台，重新定义高等教育与 STEAM 实验标准</strong>
+  <strong>Show your vision, and it's implemented in an instant.</strong>
+  <br />
+  <em>展示构想，瞬间实现</em>
 </p>
 
 <p align="center">
   <a href="#features">核心特性</a> •
+  <a href="#applications">应用场景</a> •
+  <a href="#low-code">零代码平台</a> •
   <a href="#tech-stack">技术栈</a> •
-  <a href="#project-structure">项目结构</a> •
-  <a href="#getting-started">快速开始</a> •
-  <a href="#deployment">部署</a>
+  <a href="#getting-started">快速开始</a>
 </p>
 
 ---
 
+## 🌟 项目简介
+
+AI具象师是基于**辰龙操作系统 + RK3588**平台打造的具身智能开发平台。它不仅仅是实现机器人的平台，更是一切具身智能的核心基石——从医疗康复到智慧工厂，从教育实验到创意落地。
+
+### 两大核心主题
+
+#### 🔧 辰龙OS + RK3588 具身基座
+辰龙操作系统是实现具身智能的系统与硬件基石，支持多种应用场景：
+- **医疗康复机器人** - 帮助偏瘫患者重新站立行走
+- **智慧工厂自动化** - 低成本柔性生产线配置
+- **STEAM教育实验** - 将抽象公式转化为可观察的具身实验
+- **物流仓储机器人** - 智能分拣与搬运
+- **智能家居助手** - 真正能帮你做家务的具身智能
+
+#### 💡 零代码 AI 具象化平台
+普通个体或工厂如何快速实现自己的想法？
+- **展示描述** - 用自然语言描述你的需求
+- **AI理解生成** - AI自动理解并生成方案
+- **可视化编辑** - 拖拽式调参，所见即所得
+- **快速部署** - 一键部署，快速商业化落地
+
 ## ✨ Features
 
-- 🧠 **AI 驱动的具身知识生成** - 自然语言输入，零编程门槛
-- 🎓 **清华严选内容** - 100% 权威认证教学脚本
-- 🌐 **开源生态** - 完整 ROS 接口和 SDK
-- 💰 **成本革命** - 基于 RK3588，成本降低 5 倍以上
-- 🧩 **高精度模块化** - 支持传感器、末端执行器快速更换
+- 🧠 **语音驱动开发** - 说出想法，AI自动理解并实现
+- 🏥 **医疗康复方案** - 帮助偏瘫患者的智能康复系统
+- 🏭 **智慧工厂支持** - 低成本自动化解决方案
+- 💰 **成本革命** - 基于国产RK3588，成本降低5倍以上
+- 🧩 **高精度模块化** - 支持传感器、执行器快速更换
+- 🌐 **开源生态** - 完整ROS接口和SDK
 
 ## 🛠️ Tech Stack
 
@@ -56,9 +80,11 @@ upstream-robot/
 │   │   │   ├── Navbar.tsx      # 导航栏（响应式）
 │   │   │   └── Footer.tsx      # 页脚
 │   │   ├── sections/
-│   │   │   ├── Hero.tsx        # 首屏（粒子动画、神经网络）
+│   │   │   ├── Hero.tsx        # 首屏（Slogan、核心亮点）
+│   │   │   ├── EmbodiedApps.tsx # 辰龙OS具身应用场景
+│   │   │   ├── LowCodePlatform.tsx # 零代码AI具象化平台
 │   │   │   ├── Features.tsx    # 五大核心特性
-│   │   │   ├── Demos.tsx       # 学科演示场景
+│   │   │   ├── Demos.tsx       # 演示场景（医疗/工厂/教育等）
 │   │   │   ├── Platform.tsx    # 云平台介绍
 │   │   │   └── Contact.tsx     # 合作联系
 │   │   └── ui/
@@ -133,10 +159,6 @@ npm run lint
 3. 推送代码到 `main` 分支，等待 Actions 完成
 4. 访问 `https://<your-username>.github.io/<repo-name>/`
 
-#### 手动触发部署
-
-也可以在 **Actions** 页面手动触发 `Deploy to GitHub Pages` workflow。
-
 ### 其他部署方式
 
 #### Vercel（推荐）
@@ -179,11 +201,12 @@ CMD ["node", "server.js"]
 
 ## 📄 License
 
-MIT License © 2024 知识具象师团队
+MIT License © 2025 AI具象师团队
 
 ---
 
 <p align="center">
-  <sub>Made with ❤️ by 清华大学研究团队</sub>
+  <sub>Show your vision, and it's implemented in an instant.</sub>
+  <br />
+  <sub>Made with ❤️ by AI具象师团队</sub>
 </p>
-

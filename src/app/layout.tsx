@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "知识具象师 | AI 赋能的具身智能学科实验平台",
+  title: "AI具象师 | 展示构想，瞬间实现 - 辰龙OS具身智能平台",
   description:
-    "由清华大学研究团队领衔，基于 RK3588 平台，重新定义高等教育与 STEAM 实验标准。AI 驱动的具身知识生成，让抽象知识变得触手可及。",
+    "基于辰龙操作系统 + RK3588 平台，打造具身智能的核心基石。Show your vision, and it's implemented in an instant. 从医疗康复到智慧工厂，低代码/无代码开发，快速实现想法落地或商业化。",
   keywords: [
-    "具身智能",
-    "AI教育",
-    "清华大学",
+    "AI具象师",
+    "辰龙OS",
     "RK3588",
+    "具身智能",
+    "医疗康复机器人",
+    "低代码开发",
+    "无代码开发",
+    "智慧工厂",
+    "具身机器人",
+    "AI教育",
     "STEAM教育",
-    "智能实验平台",
-    "教育科技",
-    "知识具象化",
   ],
-  authors: [{ name: "知识具象师团队" }],
+  authors: [{ name: "AI具象师团队" }],
   openGraph: {
-    title: "知识具象师 | AI 具身智能实验平台",
+    title: "AI具象师 | 展示构想，瞬间实现",
     description:
-      "清华大学研究团队领衔，AI 驱动的新一代教育实验平台。成本降低5倍，零编程门槛，100%权威认证内容。",
+      "基于辰龙OS + RK3588的具身智能平台。医疗康复、智慧工厂、教育实验，展示描述即可实现。零代码开发，快速商业化落地。",
     type: "website",
     locale: "zh_CN",
   },
@@ -42,4 +45,3 @@ export default function RootLayout({
     </html>
   );
 }
-

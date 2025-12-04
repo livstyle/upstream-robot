@@ -9,6 +9,9 @@ import {
   Play,
   ChevronRight,
   Sparkles,
+  Heart,
+  Factory,
+  Package,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,33 +19,87 @@ import { Button } from "@/components/ui/button";
 const demos = [
   {
     id: 1,
-    subject: "物理学",
-    icon: Atom,
-    title: "高精度抛物线实验",
+    subject: "医疗康复",
+    icon: Heart,
+    title: "偏瘫患者步态康复训练",
     description:
-      "将抽象的数学公式转化为可观察、可测量的真实运动轨迹。学生可以直观地看到物体在重力作用下的完美抛物线运动。",
-    coreValue: "公式可视化，理论实践结合",
+      "基于辰龙OS的智能康复机器人，通过精准的运动控制和实时反馈，帮助偏瘫患者重新学习行走。AI实时分析步态，动态调整训练方案。",
+    coreValue: "让每一位患者重获行动自由",
     details: [
-      "精确模拟不同初速度的抛物运动",
-      "实时测量并显示位移、速度、加速度",
-      "支持参数调整，观察变化规律",
-      "可与理论计算值对比验证",
+      "智能步态分析与实时矫正",
+      "力反馈自适应调节",
+      "康复进度数据可视化",
+      "远程医生监控与指导",
     ],
-    gradient: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-500",
-    image: "/demos/physics.png",
+    gradient: "from-rose-500 to-pink-500",
+    bgColor: "bg-rose-500",
+    image: "/demos/medical.png",
   },
   {
     id: 2,
+    subject: "智慧工厂",
+    icon: Factory,
+    title: "柔性生产线自动化配置",
+    description:
+      "描述生产需求，AI自动生成机器人动作序列。支持快速换线，适应多品种小批量生产模式，降低中小工厂的自动化门槛。",
+    coreValue: "让每个工厂都能智能制造",
+    details: [
+      "配置生产流程",
+      "视觉质检自动化",
+      "多机器人协同作业",
+      "生产数据实时分析",
+    ],
+    gradient: "from-blue-500 to-cyan-500",
+    bgColor: "bg-blue-500",
+    image: "/demos/factory.png",
+  },
+  {
+    id: 3,
+    subject: "物流仓储",
+    icon: Package,
+    title: "智能分拣与搬运系统",
+    description:
+      "辰龙OS驱动的物流机器人群，实现货物自动分拣、智能搬运和库存盘点。多机协同，大幅提升仓储效率。",
+    coreValue: "让物流更智能更高效",
+    details: [
+      "智能路径规划算法",
+      "多机协同避障",
+      "货物自动识别分类",
+      "库存实时追踪管理",
+    ],
+    gradient: "from-amber-500 to-orange-500",
+    bgColor: "bg-amber-500",
+    image: "/demos/logistics.png",
+  },
+  {
+    id: 4,
+    subject: "物理实验",
+    icon: Atom,
+    title: "高精度抛物线运动演示",
+    description:
+      "将抽象的数学公式转化为可观察的真实运动轨迹。学生可以直观看到物体在重力作用下的完美抛物线运动，理解F=ma的物理意义。",
+    coreValue: "公式可视化，理论实践结合",
+    details: [
+      "精确模拟不同初速度的抛物运动",
+      "实时测量位移、速度、加速度",
+      "参数调整观察变化规律",
+      "理论与实测数据对比验证",
+    ],
+    gradient: "from-indigo-500 to-purple-500",
+    bgColor: "bg-indigo-500",
+    image: "/demos/physics.png",
+  },
+  {
+    id: 5,
     subject: "化学/生物",
     icon: FlaskConical,
-    title: "动态分子建模与折叠",
+    title: "动态分子结构建模",
     description:
       "机器人手臂实时搭建复杂的分子或蛋白质结构，动态展示微观世界。让抽象的分子结构变得触手可及。",
     coreValue: "微观世界宏观化，抽象概念具象化",
     details: [
-      "DNA 双螺旋结构实时构建",
-      "蛋白质折叠过程动态演示",
+      "DNA双螺旋结构实时构建",
+      "蛋白质折叠过程演示",
       "化学键形成与断裂可视化",
       "分子间作用力直观展示",
     ],
@@ -51,8 +108,8 @@ const demos = [
     image: "/demos/chemistry.png",
   },
   {
-    id: 3,
-    subject: "高等数学/工程",
+    id: 6,
+    subject: "高等数学",
     icon: TrendingUp,
     title: "三维函数曲线描绘",
     description:
@@ -100,7 +157,7 @@ export default function Demos() {
   return (
     <section
       id="demos"
-      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-900"
+      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-950"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-20" />
@@ -118,16 +175,18 @@ export default function Demos() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-300">应用场景</span>
+            <span className="text-sm font-medium text-cyan-300">演示场景</span>
           </div>
           <h2
             className="text-responsive-2xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            具象化演示
+            具象化应用展示
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-2xl mx-auto">
-            跨越物理、化学、数学等多学科，让抽象知识变得触手可及
+            从医疗康复到智慧工厂，从物流仓储到教育实验
+            <br className="hidden md:block" />
+            AI具象师让每一个场景都能快速落地
           </p>
         </motion.div>
 
@@ -137,7 +196,7 @@ export default function Demos() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {demos.map((demo, index) => {
             const Icon = demo.icon;
@@ -145,14 +204,14 @@ export default function Demos() {
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl transition-all duration-300 ${
                   activeDemo === index
                     ? `bg-gradient-to-r ${demo.gradient} text-white shadow-lg`
                     : "glass text-slate-400 hover:text-white"
                 }`}
               >
-                <Icon className="w-5 h-5" />
-                <span className="font-medium">{demo.subject}</span>
+                <Icon className="w-4 h-4" />
+                <span className="font-medium text-sm">{demo.subject}</span>
               </button>
             );
           })}
@@ -203,7 +262,7 @@ export default function Demos() {
                       </div>
 
                       <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">
-                        演示内容
+                        功能亮点
                       </h4>
                       <ul className="space-y-3 mb-8">
                         {demo.details.map((detail, idx) => (
@@ -221,11 +280,16 @@ export default function Demos() {
                         ))}
                       </ul>
 
-                      <Button size="lg" className="group">
-                        <Play className="w-5 h-5" />
-                        <span>观看完整演示</span>
-                        <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </Button>
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <Button size="lg" className="group">
+                          <Play className="w-5 h-5" />
+                          <span>观看完整演示</span>
+                          <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        </Button>
+                        <Button variant="outline" size="lg">
+                          <span>获取方案详情</span>
+                        </Button>
+                      </div>
                     </div>
 
                     {/* Visual Side */}
@@ -252,7 +316,7 @@ export default function Demos() {
                           <div className="absolute inset-4 border-2 border-purple-500/30 transform -rotate-12 skew-y-6" />
                           <div className="absolute inset-8 border-2 border-pink-500/30 transform rotate-6" />
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <demo.icon className={`w-20 h-20 text-gradient-blue opacity-60`} />
+                            <demo.icon className="w-20 h-20 text-gradient-blue opacity-60" />
                           </div>
                         </motion.div>
 
@@ -262,7 +326,7 @@ export default function Demos() {
                             <span className="text-sm font-medium">实时演示准备中</span>
                           </div>
                           <p className="text-slate-500 text-sm">
-                            点击观看完整演示视频，了解具身智能如何将{demo.subject}知识具象化
+                            点击观看完整演示视频，了解{demo.subject}场景的具象化解决方案
                           </p>
                         </div>
                       </div>
@@ -287,10 +351,10 @@ export default function Demos() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
         >
           {[
-            { label: "覆盖学科", value: "10+", suffix: "" },
-            { label: "演示脚本", value: "500+", suffix: "" },
-            { label: "合作院校", value: "50+", suffix: "" },
-            { label: "学生受益", value: "10万+", suffix: "" },
+            { label: "应用场景", value: "20+", suffix: "" },
+            { label: "解决方案", value: "100+", suffix: "" },
+            { label: "合作客户", value: "50+", suffix: "" },
+            { label: "成功案例", value: "200+", suffix: "" },
           ].map((stat, index) => (
             <div key={index} className="glass rounded-xl p-6 text-center">
               <div
@@ -307,4 +371,3 @@ export default function Demos() {
     </section>
   );
 }
-

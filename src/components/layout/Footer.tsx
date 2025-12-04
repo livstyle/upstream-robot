@@ -15,11 +15,11 @@ const footerLinks = {
   product: {
     title: "产品",
     links: [
+      { label: "具身应用场景", href: "#applications" },
+      { label: "零代码平台", href: "#low-code" },
       { label: "核心特性", href: "#features" },
-      { label: "应用场景", href: "#demos" },
+      { label: "演示场景", href: "#demos" },
       { label: "云平台", href: "#platform" },
-      { label: "技术文档", href: "#" },
-      { label: "API 接口", href: "#" },
     ],
   },
   resources: {
@@ -53,10 +53,11 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
+  { icon: Github, href: "https://github.com/livstyle", target: "_blank", label: "GitHub" },
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Mail, href: "mailto:livstylecn@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -84,17 +85,24 @@ export default function Footer() {
                     className="text-xl font-bold text-white"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                   >
-                    知识具象师
+                    AI具象师
                   </span>
                   <span className="block text-xs text-slate-500">
-                    AI 具身智能实验平台
+                    辰龙OS 具身智能平台
                   </span>
                 </div>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-                由清华大学研究团队领衔，基于 RK3588 平台打造的新一代 AI 具身智能教育实验平台。
-                让抽象知识具象化，重新定义高等教育标准。
+                基于辰龙操作系统 + RK3588 平台打造的新一代 AI 具身智能平台。
+                展示构想，瞬间实现，让每个人的创意都能具象化落地。
               </p>
+
+              {/* Slogan */}
+              <div className="glass rounded-xl p-4 mb-6 border border-cyan-500/20">
+                <p className="text-cyan-400 text-sm italic" style={{ fontFamily: "var(--font-orbitron)" }}>
+                  &ldquo;Show your vision, and it&apos;s implemented in an instant.&rdquo;
+                </p>
+              </div>
 
               {/* Newsletter */}
               <div className="mb-6">
@@ -122,6 +130,7 @@ export default function Footer() {
                     <motion.a
                       key={index}
                       href={social.href}
+                      target={social.target}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-cyan-500/50 transition-all"
@@ -160,7 +169,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-            <span>© 2024 知识具象师. All rights reserved.</span>
+            <span>© 2025 AI具象师. All rights reserved.</span>
             <span className="hidden sm:inline">·</span>
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -183,4 +192,3 @@ export default function Footer() {
     </footer>
   );
 }
-

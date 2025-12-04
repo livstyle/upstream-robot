@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Download, Sparkles, Cpu, Brain, Zap } from "lucide-react";
+import { ArrowRight, Play, Download, Sparkles, Cpu, Brain, Zap, Mic, Settings } from "lucide-react";
 
 const FloatingOrb = ({ delay, size, color, position }: { delay: number; size: string; color: string; position: string }) => (
   <motion.div
@@ -116,7 +116,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
             <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-300">清华大学研究团队领衔</span>
+            <span className="text-sm font-medium text-cyan-300">辰龙OS + RK3588 具身智能基座</span>
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           </motion.div>
 
@@ -128,9 +128,20 @@ export default function Hero() {
             className="text-responsive-hero font-bold mb-6"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            <span className="text-white">知识</span>
+            <span className="text-white">AI</span>
             <span className="text-gradient">具象师</span>
           </motion.h1>
+
+          {/* English Slogan */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="text-lg sm:text-xl lg:text-2xl text-cyan-400 mb-4 font-light tracking-wide italic"
+            style={{ fontFamily: "var(--font-orbitron)" }}
+          >
+            &ldquo;Show your vision, and it&apos;s implemented in an instant.&rdquo;
+          </motion.p>
 
           {/* Subtitle */}
           <motion.p
@@ -139,18 +150,18 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-responsive-xl text-slate-300 mb-4 font-light"
           >
-            AI 赋能的具身智能学科实验平台
+            展示构想，瞬间实现 | AI 驱动的具身智能平台
           </motion.p>
           
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-responsive-base text-slate-400 max-w-3xl mx-auto mb-12"
+            className="text-responsive-base text-slate-400 max-w-4xl mx-auto mb-12"
           >
-            基于 RK3588 高性能平台，将抽象知识转化为可观察的具身实验
+            基于辰龙操作系统 + RK3588 高性能平台，打造具身智能的核心基石
             <br className="hidden sm:block" />
-            重新定义高等教育与 STEAM 实验标准
+            不仅是机器人，更是医疗康复、智慧工厂、创意落地的万能具象化引擎
           </motion.p>
 
           {/* CTA Buttons */}
@@ -161,7 +172,8 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <Button size="xl" className="group w-full sm:w-auto">
-              <span>申请示范实验室合作</span>
+              <Mic className="w-5 h-5" />
+              <span>描述你的想法</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="outline" size="xl" className="group w-full sm:w-auto">
@@ -174,11 +186,34 @@ export default function Hero() {
             </Button>
           </motion.div>
 
+          {/* Platform Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12"
+          >
+            <HighlightCard
+              icon={<Settings className="w-8 h-8" />}
+              title="辰龙OS 具身基座"
+              description="医疗康复、智能机器人、工业自动化...辰龙OS + RK3588 是实现一切具身智能的系统与硬件基石"
+              gradient="from-purple-500 to-pink-500"
+              delay={0.8}
+            />
+            <HighlightCard
+              icon={<Mic className="w-8 h-8" />}
+              title="零代码 AI 具象化"
+              description="普通个体或工厂通过文本、语音等多模态描述场景，低代码甚至无代码开发，快速实现想法落地或商业化"
+              gradient="from-cyan-500 to-blue-500"
+              delay={0.9}
+            />
+          </motion.div>
+
           {/* Stats Cards */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
           >
             <StatCard
@@ -186,21 +221,21 @@ export default function Hero() {
               value="5x"
               label="成本降低"
               description="国产RK3588平台带来的成本革命"
-              delay={0.9}
+              delay={1.1}
             />
             <StatCard
               icon={<Brain className="w-8 h-8" />}
               value="0"
               label="编程门槛"
-              description="AI驱动，自然语言即可操作"
-              delay={1.0}
+              description="多模态驱动，描述即实现"
+              delay={1.2}
             />
             <StatCard
               icon={<Cpu className="w-8 h-8" />}
-              value="100%"
-              label="清华认证"
-              description="权威内容，专业背书"
-              delay={1.1}
+              value="∞"
+              label="应用场景"
+              description="医疗、教育、工业、创意无限"
+              delay={1.3}
             />
           </motion.div>
         </div>
@@ -226,6 +261,39 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
+  );
+}
+
+function HighlightCard({
+  icon,
+  title,
+  description,
+  gradient,
+  delay,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  gradient: string;
+  delay: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+      className="glass-card rounded-2xl p-6 hover-card group text-left border border-slate-700/50"
+    >
+      <div className="flex items-start gap-4">
+        <div className={`p-3 rounded-xl bg-gradient-to-br ${gradient} text-white group-hover:scale-110 transition-transform duration-300`}>
+          {icon}
+        </div>
+        <div>
+          <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
+          <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
@@ -264,4 +332,3 @@ function StatCard({
     </motion.div>
   );
 }
-

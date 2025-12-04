@@ -3,46 +3,48 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  Brain,
-  GraduationCap,
+  Cpu,
+  Mic,
   Globe,
   Coins,
   Settings,
   Sparkles,
   ArrowRight,
   CheckCircle,
+  Shield,
+  Zap,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
     id: 1,
-    icon: Brain,
-    title: "AI 驱动的具身知识生成",
-    subtitle: "Content-to-Action",
+    icon: Cpu,
+    title: "辰龙OS + RK3588 核心基座",
+    subtitle: "Embodied Foundation",
     description:
-      "告别繁琐编程！只需输入知识点或公式（如牛顿第二定律），AI 即可实时推理并生成高精度的实验动作序列。",
+      "辰龙操作系统是实现具身智能的核心基石。配合国产高性能 RK3588 NPU 平台，提供强大的边缘AI计算能力，支撑医疗、教育、工业等多元场景。",
     benefits: [
-      "自然语言输入，零编程门槛",
-      "实时推理，秒级响应",
-      "高精度动作序列生成",
-      "支持复杂公式解析",
+      "边缘AI实时推理",
+      "多传感器融合支持",
+      "低功耗高性能设计",
+      "完整ROS生态兼容",
     ],
     gradient: "from-cyan-500 to-blue-600",
     bgGlow: "bg-cyan-500",
   },
   {
     id: 2,
-    icon: GraduationCap,
-    title: "权威背书：清华严选",
-    subtitle: "Professional Endorsement",
+    icon: Mic,
+    title: "多模态驱动，零代码开发",
+    subtitle: "Show-to-Action",
     description:
-      "所有核心教学脚本均由清华大学研究团队进行科学性与教学法审核。我们保证您使用的是最严谨、最前沿的教育内容。",
+      "告别繁琐编程！用自然语言描述你的想法，AI 自动理解需求并生成可执行的动作序列。普通人也能快速创建具身智能应用。",
     benefits: [
-      "清华大学专业团队审核",
-      "科学性与教学法双重保障",
-      "持续更新前沿内容",
-      "学科覆盖全面完整",
+      "自然语言交互",
+      "AI 智能理解需求",
+      "可视化参数调整",
+      "快速原型到产品",
     ],
     gradient: "from-purple-500 to-pink-600",
     bgGlow: "bg-purple-500",
@@ -50,10 +52,10 @@ const features = [
   {
     id: 3,
     icon: Globe,
-    title: "开放与共创：开源生态",
+    title: "开放生态，全球共创",
     subtitle: "Open Source Ecosystem",
     description:
-      "硬件开放，软件开源。我们提供完整的 ROS 接口和 SDK，鼓励全球开发者和教育者共创、分享和改进演示脚本。",
+      "硬件开放，软件开源。完整的 ROS 接口和 SDK，鼓励全球开发者和企业共创、分享和改进应用方案。",
     benefits: [
       "完整 ROS 接口支持",
       "丰富 SDK 开发工具",
@@ -66,15 +68,15 @@ const features = [
   {
     id: 4,
     icon: Coins,
-    title: "极致性价比：成本革命",
+    title: "成本革命，普惠AI",
     subtitle: "Cost Revolution",
     description:
-      "利用国产高性能 RK3588 NPU 平台，在保证实验室级精度的同时，将传统昂贵设备的成本降至可负担范围。",
+      "利用国产高性能 RK3588 NPU 平台，在保证性能的同时，将传统昂贵设备的成本降至可负担范围，让更多人享受具身智能。",
     benefits: [
       "成本降低 5 倍以上",
       "国产自主可控",
-      "实验室级精度保障",
-      "推动教育资源普及",
+      "性能毫不妥协",
+      "普惠各类用户",
     ],
     gradient: "from-amber-500 to-orange-600",
     bgGlow: "bg-amber-500",
@@ -82,15 +84,15 @@ const features = [
   {
     id: 5,
     icon: Settings,
-    title: "高精度与通用性",
+    title: "高精度模块化设计",
     subtitle: "Precision & Modularity",
     description:
-      "采用高精度伺服系统，满足复杂科学实验对运动控制的需求。模块化设计支持传感器、末端执行器快速更换。",
+      "采用高精度伺服系统，满足医疗、科研等场景对运动控制的严格需求。模块化设计支持快速定制和扩展。",
     benefits: [
       "高精度伺服系统",
-      "模块化快速更换",
-      "广泛场景适配",
-      "传感器扩展支持",
+      "模块化快速定制",
+      "多场景适配能力",
+      "传感器灵活扩展",
     ],
     gradient: "from-rose-500 to-red-600",
     bgGlow: "bg-rose-500",
@@ -126,7 +128,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-950"
+      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-indigo-950"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-30" />
@@ -149,10 +151,10 @@ export default function Features() {
             className="text-responsive-2xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            五大颠覆优势
+            五大核心优势
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-2xl mx-auto">
-            融合前沿 AI 技术与具身智能，打造全新一代教育实验平台
+            辰龙OS + RK3588 + AI 具象化技术，打造具身智能新范式
           </p>
         </motion.div>
 
@@ -178,14 +180,14 @@ export default function Features() {
               <CardContent className="p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
                   <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
-                    <Sparkles className="w-8 h-8 text-cyan-400" />
+                    <Shield className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-1">
-                      想要深入了解更多？
+                      想要深入了解辰龙OS技术架构？
                     </h3>
                     <p className="text-slate-400">
-                      下载完整技术白皮书，获取详细产品规格与技术参数
+                      下载完整技术白皮书，获取详细架构设计与性能参数
                     </p>
                   </div>
                 </div>
@@ -196,6 +198,36 @@ export default function Features() {
               </CardContent>
             </Card>
           </motion.div>
+        </motion.div>
+
+        {/* Trust Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 flex flex-wrap justify-center gap-6"
+        >
+          {[
+            { icon: Zap, label: "边缘AI推理", value: "<10ms" },
+            { icon: Shield, label: "安全认证", value: "企业级" },
+            { icon: Globe, label: "开源社区", value: "1000+" },
+            { icon: Cpu, label: "NPU算力", value: "6TOPS" },
+          ].map((badge, index) => {
+            const Icon = badge.icon;
+            return (
+              <div
+                key={index}
+                className="flex items-center gap-3 px-5 py-3 glass rounded-xl"
+              >
+                <Icon className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <p className="text-xs text-slate-500">{badge.label}</p>
+                  <p className="font-bold text-white">{badge.value}</p>
+                </div>
+              </div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
@@ -254,44 +286,31 @@ function FeatureCard({
               {/* Animated Background */}
               <div className={`absolute w-64 h-64 ${feature.bgGlow} opacity-20 blur-3xl animate-pulse`} />
               
-              {/* Code Preview Animation */}
+              {/* Tech Stack Preview */}
               <div className="relative p-6 w-full max-w-md">
-                <div className="glass rounded-xl p-4 font-mono text-sm">
+                <div className="glass rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700">
-                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                    <Cpu className="w-5 h-5 text-cyan-400" />
+                    <span className="text-sm font-medium text-white">辰龙OS 系统架构</span>
                   </div>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    <p className="text-slate-500"># 输入知识点</p>
-                    <p className="text-cyan-400 mt-2">
-                      <span className="text-purple-400">ai.generate</span>(
-                    </p>
-                    <p className="text-green-400 ml-4">&quot;牛顿第二定律 F=ma&quot;</p>
-                    <p className="text-cyan-400">)</p>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 1, duration: 0.5 }}
-                      className="text-slate-500 mt-4"
-                    >
-                      # AI 自动生成实验序列...
-                    </motion.p>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 1.5, duration: 0.5 }}
-                      className="mt-2"
-                    >
-                      <p className="text-emerald-400">✓ 实验序列生成完成</p>
-                      <p className="text-emerald-400">✓ 动作轨迹已优化</p>
-                      <p className="text-emerald-400">✓ 准备执行...</p>
-                    </motion.div>
-                  </motion.div>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                      <span className="text-sm text-slate-300">应用层</span>
+                      <span className="text-xs text-cyan-400 px-2 py-1 bg-cyan-500/20 rounded">AI具象师</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                      <span className="text-sm text-slate-300">中间件</span>
+                      <span className="text-xs text-purple-400 px-2 py-1 bg-purple-500/20 rounded">Dros-rs + SDK...</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                      <span className="text-sm text-slate-300">系统层</span>
+                      <span className="text-xs text-green-400 px-2 py-1 bg-green-500/20 rounded">辰龙OS</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                      <span className="text-sm text-slate-300">硬件层</span>
+                      <span className="text-xs text-amber-400 px-2 py-1 bg-amber-500/20 rounded">RK3588 NPU</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,4 +320,3 @@ function FeatureCard({
     </motion.div>
   );
 }
-

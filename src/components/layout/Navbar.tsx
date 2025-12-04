@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles, ChevronRight } from "lucide-react";
+import { Menu, X, Sparkles, ChevronRight, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "首页", href: "#hero" },
+  { label: "具身应用", href: "#applications" },
+  { label: "零代码平台", href: "#low-code" },
   { label: "核心特性", href: "#features" },
-  { label: "应用场景", href: "#demos" },
+  { label: "演示场景", href: "#demos" },
   { label: "云平台", href: "#platform" },
   { label: "合作联系", href: "#contact" },
 ];
@@ -52,10 +54,10 @@ export default function Navbar() {
                   className="text-lg font-bold text-white"
                   style={{ fontFamily: "var(--font-orbitron)" }}
                 >
-                  知识具象师
+                  AI具象师
                 </span>
                 <span className="block text-xs text-slate-400">
-                  AI 具身智能实验平台
+                  辰龙OS 具身智能平台
                 </span>
               </div>
             </a>
@@ -79,7 +81,8 @@ export default function Navbar() {
                 登录
               </Button>
               <Button size="sm" className="group">
-                <span>立即体验</span>
+                <Mic className="w-4 h-4" />
+                <span>开始创建</span>
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
             </div>
@@ -129,7 +132,7 @@ export default function Navbar() {
                     className="text-lg font-bold text-white"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                   >
-                    具象师
+                    AI具象师
                   </span>
                 </div>
                 <button
@@ -162,7 +165,8 @@ export default function Navbar() {
                   登录
                 </Button>
                 <Button className="w-full justify-center">
-                  立即体验
+                  <Mic className="w-4 h-4" />
+                  开始创建
                 </Button>
               </div>
             </motion.nav>
@@ -172,4 +176,3 @@ export default function Navbar() {
     </>
   );
 }
-

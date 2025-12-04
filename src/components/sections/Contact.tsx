@@ -11,14 +11,15 @@ import {
   MessageSquare,
   FileText,
   CheckCircle,
+  Cpu,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const benefits = [
-  "专属技术支持团队",
+  "辰龙OS技术培训",
   "优先体验新功能",
-  "免费培训与认证",
+  "免费开发支持",
   "合作优惠价格",
   "定制化解决方案",
   "品牌联合推广",
@@ -28,7 +29,7 @@ const contactMethods = [
   {
     icon: Mail,
     label: "商务合作",
-    value: "contact@zhishijuxiang.com",
+    value: "contact@aijuxiang.com",
     description: "产品咨询与商务洽谈",
     color: "text-cyan-400",
     bgColor: "bg-cyan-500/10",
@@ -36,8 +37,8 @@ const contactMethods = [
   {
     icon: MessageSquare,
     label: "技术支持",
-    value: "techsupport@zhishijuxiang.com",
-    description: "技术问题与使用指导",
+    value: "tech@aijuxiang.com",
+    description: "技术问题与开发指导",
     color: "text-purple-400",
     bgColor: "bg-purple-500/10",
   },
@@ -55,7 +56,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-950"
+      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-950"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid opacity-20" />
@@ -78,12 +79,12 @@ export default function Contact() {
             className="text-responsive-2xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            成为先驱者
+            成为合作伙伴
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-2xl mx-auto">
-            申请成为首批&ldquo;具身智能示范实验室&rdquo;合作伙伴
+            无论你是工厂、医院、学校还是创业者
             <br />
-            享受独家技术支持与合作优惠
+            我们期待与你共同探索具身智能的无限可能
           </p>
         </motion.div>
 
@@ -102,17 +103,17 @@ export default function Contact() {
               <CardContent className="relative p-8 lg:p-10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600">
-                    <Building className="w-6 h-6 text-white" />
+                    <Cpu className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">示范实验室合作计划</h3>
-                    <p className="text-sm text-slate-400">高校 · 科研院所 · 教育集团</p>
+                    <h3 className="text-xl font-bold text-white">辰龙OS生态合作计划</h3>
+                    <p className="text-sm text-slate-400">工厂 · 医疗 · 教育 · 创业者</p>
                   </div>
                 </div>
 
                 <p className="text-slate-400 mb-8 leading-relaxed">
-                  如果您是高校、科研院所或教育集团，我们诚邀您加入首批&ldquo;具身智能示范实验室&rdquo;合作计划。
-                  作为先驱合作伙伴，您将获得独家资源与支持。
+                  如果你有具身智能应用需求，或希望基于辰龙OS + RK3588平台开发产品，
+                  我们诚邀你加入AI具象师生态合作计划，共同推动具身智能落地应用。
                 </p>
 
                 <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">
@@ -202,17 +203,36 @@ export default function Contact() {
                     <div>
                       <p className="text-sm text-slate-500 mb-1">公司地址</p>
                       <p className="text-lg font-semibold text-white mb-1">
-                        北京市海淀区清华科技园
+                        深圳市南山区科技园
                       </p>
                       <p className="text-sm text-slate-400">
                         创新大厦 A 座 1688 号
                       </p>
                       <div className="flex items-center gap-2 mt-3 text-xs text-cyan-400">
                         <Building className="w-4 h-4" />
-                        <span>清华大学战略合作伙伴</span>
+                        <span>辰龙OS生态核心成员</span>
                       </div>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Slogan Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-r from-cyan-950/80 to-purple-950/80 border-cyan-500/30">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg text-cyan-400 italic mb-2" style={{ fontFamily: "var(--font-orbitron)" }}>
+                    &ldquo;Show your vision, and it&apos;s implemented in an instant.&rdquo;
+                  </p>
+                  <p className="text-slate-400 text-sm">
+                    展示构想，瞬间实现
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -222,4 +242,3 @@ export default function Contact() {
     </section>
   );
 }
-
