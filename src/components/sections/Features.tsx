@@ -52,15 +52,15 @@ const features = [
   {
     id: 3,
     icon: Globe,
-    title: "开放生态，全球共创",
-    subtitle: "Open Source Ecosystem",
+    title: "开源商业，共建生态",
+    subtitle: "Open Source Business",
     description:
-      "硬件开放，软件开源。完整的 ROS 接口和 SDK，鼓励全球开发者和企业共创、分享和改进应用方案。",
+      "硬件开放，软件开源，商业共赢。通过开源社区汇聚全球智慧，共同做大做强商业化产品。你的贡献可以成为商业产品的一部分，共享商业收益。",
     benefits: [
-      "完整 ROS 接口支持",
-      "丰富 SDK 开发工具",
-      "全球开发者社区",
-      "共创共享机制",
+      "开源代码商业授权",
+      "社区贡献收益分成",
+      "商业产品共建计划",
+      "全球开发者生态",
     ],
     gradient: "from-green-500 to-emerald-600",
     bgGlow: "bg-green-500",

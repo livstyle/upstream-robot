@@ -22,14 +22,14 @@ const footerLinks = {
       { label: "云平台", href: "#platform" },
     ],
   },
-  resources: {
-    title: "资源",
+  opensource: {
+    title: "开源生态",
     links: [
-      { label: "开发者中心", href: "#" },
       { label: "GitHub 仓库", href: "#" },
-      { label: "教程指南", href: "#" },
-      { label: "常见问题", href: "#" },
-      { label: "更新日志", href: "#" },
+      { label: "贡献者指南", href: "#" },
+      { label: "商业授权", href: "#" },
+      { label: "收益分成计划", href: "#" },
+      { label: "社区治理", href: "#" },
     ],
   },
   company: {
@@ -85,7 +85,7 @@ export default function Footer() {
                     className="text-xl font-bold text-white"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                   >
-                    AI具象师
+                    开源AI具象师
                   </span>
                   <span className="block text-xs text-slate-500">
                     辰龙OS 具身智能平台
@@ -169,7 +169,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-            <span>© 2025 AI具象师. All rights reserved.</span>
+            <span>© 2025 辰龙OS. All rights reserved.</span>
             <span className="hidden sm:inline">·</span>
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />

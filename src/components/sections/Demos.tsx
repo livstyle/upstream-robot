@@ -186,7 +186,7 @@ export default function Demos() {
           <p className="text-responsive-base text-slate-400 max-w-2xl mx-auto">
             从医疗康复到智慧工厂，从物流仓储到教育实验
             <br className="hidden md:block" />
-            AI具象师让每一个场景都能快速落地
+            开源AI具象师让每一个场景都能快速落地
           </p>
         </motion.div>
 

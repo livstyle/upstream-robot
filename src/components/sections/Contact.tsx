@@ -113,7 +113,7 @@ export default function Contact() {
 
                 <p className="text-slate-400 mb-8 leading-relaxed">
                   如果你有具身智能应用需求，或希望基于辰龙OS + RK3588平台开发产品，
-                  我们诚邀你加入AI具象师生态合作计划，共同推动具身智能落地应用。
+                  我们诚邀你加入开源AI具象师生态合作计划，共同推动具身智能落地应用。
                 </p>
 
                 <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">
@@ -203,14 +203,14 @@ export default function Contact() {
                     <div>
                       <p className="text-sm text-slate-500 mb-1">公司地址</p>
                       <p className="text-lg font-semibold text-white mb-1">
-                        深圳市南山区科技园
+                        北京市XX区科技园
                       </p>
                       <p className="text-sm text-slate-400">
                         创新大厦 A 座 1688 号
                       </p>
                       <div className="flex items-center gap-2 mt-3 text-xs text-cyan-400">
                         <Building className="w-4 h-4" />
-                        <span>辰龙OS生态核心成员</span>
+                        <span>辰龙OS生态成员</span>
                       </div>
                     </div>
                   </div>

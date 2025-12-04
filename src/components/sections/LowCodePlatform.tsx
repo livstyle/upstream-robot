@@ -22,6 +22,7 @@ import {
   FlaskConical,
   Heart,
   Star,
+  Globe,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -445,6 +446,76 @@ export default function LowCodePlatform() {
           </Card>
         </motion.div>
 
+        {/* Open Source Business Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <Card className="overflow-hidden border-green-500/30 bg-gradient-to-r from-green-950/50 to-slate-900/50">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">开源商业 · 共建共赢</h3>
+                  <p className="text-sm text-slate-400">通过开源汇聚智慧，共同做大做强商业化产品</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-4 gap-4">
+                {[
+                  { step: "贡献", title: "代码开源", desc: "提交代码、方案、创意", icon: "💻", color: "text-green-400" },
+                  { step: "审核", title: "社区评审", desc: "质量认证、安全验证", icon: "✅", color: "text-blue-400" },
+                  { step: "商用", title: "产品上架", desc: "集成到商业产品中", icon: "🚀", color: "text-purple-400" },
+                  { step: "分成", title: "收益共享", desc: "按贡献比例分成", icon: "💰", color: "text-amber-400" },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative"
+                  >
+                    <div className="glass rounded-xl p-4 h-full">
+                      <div className="text-2xl mb-2">{item.icon}</div>
+                      <div className={`text-xs font-medium mb-1 ${item.color}`}>{item.step}</div>
+                      <div className="text-white font-semibold mb-1">{item.title}</div>
+                      <div className="text-xs text-slate-400">{item.desc}</div>
+                    </div>
+                    {index < 3 && (
+                      <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-green-500/50">
+                        →
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-slate-700/50">
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-slate-300">MIT/Apache 开源协议</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-slate-300">透明的收益分配机制</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-slate-300">社区治理投票权</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -453,25 +524,25 @@ export default function LowCodePlatform() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="overflow-hidden bg-gradient-to-r from-cyan-950/80 to-purple-950/80 border-2 border-cyan-500/30">
+          <Card className="overflow-hidden bg-gradient-to-r from-green-950/80 to-cyan-950/80 border-2 border-green-500/30">
             <CardContent className="p-8 lg:p-12">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="text-left">
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    准备好将你的想法变成现实了吗？
+                    加入开源社区，共建商业生态
                   </h3>
                   <p className="text-slate-400">
-                    免费注册，立即开始你的 AI 具象化之旅
+                    无论你是开发者、教育者还是企业，都能在这里找到属于你的位置
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="xl" className="group whitespace-nowrap">
-                    <Zap className="w-5 h-5" />
-                    <span>免费开始创建</span>
+                  <Button size="xl" className="group whitespace-nowrap bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                    <Globe className="w-5 h-5" />
+                    <span onClick={() => window.open("https://opencamp.cn/ChenLongOS/camp/ai-stack", "_blank")}>加入辰龙OS开源社区</span>
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button variant="outline" size="xl" className="whitespace-nowrap">
-                    <span>预约演示</span>
+                  <Button variant="outline" size="xl" className="whitespace-nowrap border-green-500/50 text-green-400 hover:bg-green-500/10">
+                    <span onClick={() => window.open("https://github.com/chenlongos", "_blank")}>查看开源仓库</span>
                   </Button>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Download, Sparkles, Cpu, Brain, Zap, Mic, Settings } from "lucide-react";
+import { ArrowRight, Play, Download, Sparkles, Cpu, Brain, Zap, Mic, Settings, Globe, Github } from "lucide-react";
 
 const FloatingOrb = ({ delay, size, color, position }: { delay: number; size: string; color: string; position: string }) => (
   <motion.div
@@ -191,7 +191,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12"
           >
             <HighlightCard
               icon={<Settings className="w-8 h-8" />}
@@ -203,9 +203,16 @@ export default function Hero() {
             <HighlightCard
               icon={<Mic className="w-8 h-8" />}
               title="零代码 AI 具象化"
-              description="普通个体或工厂通过文本、语音等多模态描述场景，低代码甚至无代码开发，快速实现想法落地或商业化"
+              description="通过多模态描述场景，低代码甚至无代码开发，快速实现想法落地或商业化"
               gradient="from-cyan-500 to-blue-500"
               delay={0.9}
+            />
+            <HighlightCard
+              icon={<Globe className="w-8 h-8" />}
+              title="开源商业 共建生态"
+              description="通过开源社区汇聚全球智慧，共同做大做强商业化产品，贡献者共享商业收益"
+              gradient="from-green-500 to-emerald-500"
+              delay={1.0}
             />
           </motion.div>
 

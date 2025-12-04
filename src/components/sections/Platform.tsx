@@ -15,38 +15,41 @@ import {
   Zap,
   Mic,
   Package,
+  Github,
+  Globe,
+  DollarSign,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const platformFeatures = [
   {
-    icon: Mic,
-    title: "描述你的想法",
-    description: "用自然语言描述你的想法，AI自动理解需求并生成可执行方案。真正的零代码开发体验。",
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-500/10",
-  },
-  {
-    icon: Layout,
-    title: "可视化编辑器",
-    description: "拖拽式界面，让任何人都能快速定制和微调参数。所见即所得，实时预览效果。",
-    color: "text-purple-400",
-    bgColor: "bg-purple-500/10",
+    icon: Github,
+    title: "开源商业生态",
+    description: "核心代码开源，社区共建。贡献者可获得商业产品收益分成，共同做大做强生态。",
+    color: "text-green-400",
+    bgColor: "bg-green-500/10",
   },
   {
     icon: Package,
-    title: "应用方案市场",
-    description: "浏览和购买已验证的解决方案，或将自己的创作上架销售。共享经济，共同受益。",
+    title: "作品展示与交易",
+    description: "开发者作品可上架市场销售，需求方可找到成熟方案和专业人才，实现双向对接。",
     color: "text-amber-400",
     bgColor: "bg-amber-500/10",
   },
   {
+    icon: Layout,
+    title: "可视化开发工具",
+    description: "拖拽式界面，零代码快速开发。所见即所得，从想法到产品只需几步。",
+    color: "text-purple-400",
+    bgColor: "bg-purple-500/10",
+  },
+  {
     icon: Users,
-    title: "开发者社区",
-    description: "与全球开发者交流分享，获取技术支持。参与贡献即获积分和官方认证。",
-    color: "text-green-400",
-    bgColor: "bg-green-500/10",
+    title: "全球开发者社区",
+    description: "汇聚全球开发者智慧，技术交流、项目协作、商业合作一站式完成。",
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-500/10",
   },
 ];
 
@@ -81,20 +84,36 @@ export default function Platform() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-300">云平台</span>
+            <Github className="w-4 h-4 text-green-400" />
+            <span className="text-sm font-medium text-green-300">开源商业平台</span>
           </div>
           <h2
             className="text-responsive-2xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            AI具象师云平台
+            开源共建 · 商业共赢
           </h2>
           <p className="text-responsive-base text-slate-400 max-w-3xl mx-auto">
-            连接创意、技术与商业的一站式具身智能开发平台
+            通过开源社区汇聚全球智慧，共同做大做强商业化产品
             <br />
-            从想法到产品，从原型到商业化
+            <span className="text-green-400">贡献代码 → 商业产品 → 收益分成</span>
           </p>
+          
+          {/* Open Source Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 border border-green-500/30">
+              <Github className="w-4 h-4 text-green-400" />
+              <span className="text-sm font-medium text-green-300">代码开源</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/30">
+              <DollarSign className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium text-amber-300">收益共享</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30">
+              <Globe className="w-4 h-4 text-purple-400" />
+              <span className="text-sm font-medium text-purple-300">全球协作</span>
+            </div>
+          </div>
         </motion.div>
 
         {/* Main Content */}
@@ -133,7 +152,7 @@ export default function Platform() {
                         <Sparkles className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-white">AI具象师云平台</h4>
+                        <h4 className="font-semibold text-white">开源AI具象师云平台</h4>
                         <p className="text-xs text-slate-500">创作者工作台</p>
                       </div>
                     </div>
