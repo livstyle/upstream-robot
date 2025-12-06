@@ -300,7 +300,7 @@ function FeatureCard({
                     </div>
                     <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                       <span className="text-sm text-slate-300">中间件</span>
-                      <span className="text-xs text-purple-400 px-2 py-1 bg-purple-500/20 rounded">Dros-rs + SDK...</span>
+                      <span className="text-xs text-purple-400 px-2 py-1 bg-purple-500/20 rounded">Dora-rs + SDK...</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                       <span className="text-sm text-slate-300">系统层</span>
